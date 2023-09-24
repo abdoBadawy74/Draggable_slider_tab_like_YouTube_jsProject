@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  min-height: 100vh;
+  background-color: #5372f0;
+}
+.wrapper {
+  max-width: 1000px;
+  padding: 35px;
+  overflow-x: hidden;
+  background-color: #fff;
+  position: relative;
+  border-radius: 13px;
+}
+.wrapper .icon {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 120px;
+  display: flex;
+  align-items: center;
+}
+.wrapper .icon:first-child {
+  left: 0;
+  display: none;
+  background: linear-gradient(90deg, #fff 70%, transparent);
+}
+.wrapper .icon:last-child {
+  right: 0;
+  justify-content: flex-end;
+  background: linear-gradient(-90deg, #fff 70%, transparent);
+}
+.wrapper .icon i {
+  cursor: pointer;
+  width: 55px;
+  height: 55px;
+  line-height: 55px;
+  font-size: 1.2rem;
+  text-align: center;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+.wrapper .icon i:hover {
+  background-color: #d8d5f2;
+}
+.wrapper .icon:first-child i {
+  margin-left: 15px;
+}
+.wrapper .icon:last-child i {
+  margin-right: 15px;
+}
+.wrapper .tabs-box {
+  display: flex;
+  gap: 12px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+.wrapper .tabs-box.dragging{
+    scroll-behavior: auto;
+    cursor: grab;
+}
+.tabs-box .tab {
+  font-size: 1.18rem;
+  white-space: nowrap;
+  padding: 13px 20px;
+  background-color: #f5f4fd;
+  border: 1px solid #d8d5f2;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.wrapper .tabs-box.dragging .tab{
+    user-select: none;
+    pointer-events: none;
+}
+.tabs-box .tab.active{
+    background: #5372f0;
+    color: #fff;
+    border-color: transparent;
+}
